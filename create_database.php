@@ -2,14 +2,15 @@
     //create_database.php
 
     require_once 'config.php';
+    require_once 'form_create_database';
 
-    $db = 'dbClotho';
+   
 
     try {
         //Requête SQL pour créer la base "test_db" si elle n'existe pas
-        $sql = "CREATE DATABASE IF NOT EXISTS $db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
+        $sql = "CREATE DATABASE IF NOT EXISTS $createdDB CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
         $pdo->exec(statement: $sql);
-        echo "Base de données '$db' créée (ou déjaà existante)." ;  
+        echo "Base de données '$createdDB' créée (ou déjaà existante)." ;  
         } catch(PDOException $e) {
             echo "Erreur lors de la création de la base de données". $e->getMessage();
         }
