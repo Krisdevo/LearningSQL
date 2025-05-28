@@ -5,8 +5,7 @@ require_once 'config.php';
 
 try {
     $table = 'users';
-    $pdo = new PDO( "mysql:host=$host; dbname=$dbname", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
     //Création de la table users
 
@@ -25,6 +24,6 @@ try {
 }
 
 //UNIQUE sur email pour éviter les doublons
-// 
+// ENGINE InnoDB pour supporter les contraintes (clés étrangères si on ajoute des relations plus tard) 
 ?>
 

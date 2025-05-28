@@ -2,8 +2,7 @@
 require_once 'config.php';
 
 try {
-    $pdo = new PDO( "mysql:host=$host; dbname=$dbname", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
     $userIdToDelete = 1; // ID à Supprimer
 
@@ -19,4 +18,7 @@ try {
 }catch(PDOException $e){
     echo"Erreur los de la suppression." .$e->getMessage();
 }
+
+// Comment détecter si la suppression a eu lieu = (rowcount()) 
 ?>
+

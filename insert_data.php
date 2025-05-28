@@ -2,13 +2,12 @@
 require_once 'config.php';
 
 try{
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
     //Données à insérer
 
-    $name = "Raymond Blin";
-    $email = "leray@example.com";
+    $name = "Arthur Boyle";
+    $email = "ab@example.com";
 
     //Requête préparée (sécurité contre les injections SQL)
 

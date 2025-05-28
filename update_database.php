@@ -2,8 +2,6 @@
 require_once 'config.php';
 
 try{
-    $pdo = new PDO("mysql:host=$host; dbname=$dbname", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $newName = "Paul";
     $userId = 1;
@@ -22,4 +20,6 @@ try{
 }catch(PDOException $e){
     echo "Erreur lors de la mis à jour : " .$e->getMessage();
 }
+// rowcount() permet de vérifier si un changement a vraiment été effectué
+
 ?>

@@ -1,14 +1,10 @@
 <?php
 
-$host = 'localhost';
-$dbname = 'dbClotho';
-$user = 'root';
-$pass = '';
+
+require_once 'config.php';
 
 try{
-    // Connexion à la BDD
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
     //Fabrication de la requête SQL
 
