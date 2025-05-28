@@ -5,8 +5,6 @@ require_once 'config.php';
 
 try {
     $table = 'users';
-
-
     //Création de la table users
 
     $sql = "
@@ -22,7 +20,6 @@ try {
 } catch (PDOException $e) {
     echo "Erreur lor de la création de la table : ". $e->getMessage();
 }
-
 //UNIQUE sur email pour éviter les doublons
 // ENGINE InnoDB pour supporter les contraintes (clés étrangères si on ajoute des relations plus tard) 
 ?>

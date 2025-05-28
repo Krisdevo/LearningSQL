@@ -2,10 +2,7 @@
 require_once 'config.php';
 
 try {
-
-
     $userIdToDelete = 1; // ID à Supprimer
-
     //Requête DELETE
     $stmt = $pdo->prepare("DELETE FROM users WHERE id = :id");
     $stmt->execute(['id' => $userIdToDelete]);
@@ -18,7 +15,6 @@ try {
 }catch(PDOException $e){
     echo"Erreur los de la suppression." .$e->getMessage();
 }
-
 // Comment détecter si la suppression a eu lieu = (rowcount()) 
 ?>
 

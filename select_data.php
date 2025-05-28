@@ -4,18 +4,13 @@
 require_once 'config.php';
 
 try{
-
-
     //Fabrication de la requête SQL
-
     $sql = "SELECT * FROM users ORDER BY created_at DESC";
     $stmt = $pdo->query($sql);
-
     // Affichage des résultats
     echo"<h2>Liste des Utilisateurs</h2>";
     echo"<table border ='1' cellpadding='8' cellspacing='0'";
     echo "<tr><th>ID</th><th>Nom</th><th>Email</th><th>Créé le</th></tr>";
-
     foreach($stmt as $row){
         echo"<tr>";
         echo "<td>{$row['id']}</td>";
